@@ -25,7 +25,7 @@ public class PlayerSkills : MonoBehaviour {
                 Instantiate(areaSpell, worldDistance, Quaternion.identity);
             }
             else {
-                notificationText.DisplayText("Not enought mana");
+                notificationText.DisplayText("Not enough mana");
                 return;
             }
         }

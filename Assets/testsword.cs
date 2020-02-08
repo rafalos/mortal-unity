@@ -8,7 +8,6 @@ public class testsword : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        testSword.Print();
     }
 
     // Update is called once per frame

@@ -8,7 +8,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int enemyCount;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Instantiate(enemy, transform.position, Quaternion.identity);
+        for (int i = 0; i < enemyCount; i++) {
+            Instantiate(enemy, transform.position + Random.insideUnitSphere * 3, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 }

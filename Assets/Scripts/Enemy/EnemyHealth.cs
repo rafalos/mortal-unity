@@ -52,7 +52,7 @@ public class EnemyHealth : MonoBehaviour {
     private void DropItems() {
         float random = Utils.GetRandomIntInRange(3,6);
         for (int i = 0; i < random; i++) {
-            var newPos = new Vector2(transform.position.x + Utils.GetRandomFloatInRange(0.1f, 1.9f), transform.position.y + Utils.GetRandomFloatInRange(0.1f, 1.9f));
+            var newPos = transform.position + Random.insideUnitSphere * 2;
             Instantiate(bloodGlobe, newPos, Quaternion.identity);
         }  
     }
